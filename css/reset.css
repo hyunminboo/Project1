@@ -164,6 +164,7 @@ body {
 }
 
 #sidebar-close-btn {
+	width: 50%;
     margin-top: auto;
     margin-bottom: 40px;
     background: #6b7280;
@@ -321,3 +322,4 @@ body {
         transform: translateY(0);
     }
 }
+
