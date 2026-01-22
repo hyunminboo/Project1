@@ -1,0 +1,323 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+    box-sizing: border-box;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.title h2 {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.top-btn {
+  position: fixed; 
+  bottom: 30px;     
+  right: 30px;     
+  z-index: 999;     
+  transition: transform 0.3s;
+}
+
+
+.top-btn img {
+  width: 30px;     
+  height: 30px;     
+  padding: 5px;
+  border-radius: 999px;
+  background: #7c7c7c;
+}
+
+
+.top-btn:hover {
+  transform: translateY(-5px); 
+}
+
+footer {
+    margin: 10px;
+}
+
+/* 공용 메뉴창 */
+
+body {
+    transition: padding-left 0.3s ease;
+}
+
+
+#img1 {
+    display: block; 
+    cursor: pointer;
+}
+
+
+.side-bar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 250px;
+    height: 100%;
+    background: #ffffff;
+    border-right: 1px solid #3b82f6;
+    box-shadow: 4px 0 15px rgba(59, 130, 246, 0.15);
+    z-index: 999;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+.side-bar.active {
+    left: 0;
+}
+
+.side-bar h2 {
+    color: #3b82f6;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+    letter-spacing: -0.5px;
+}
+
+.side-bar ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 10px;
+}
+
+.side-bar ul li {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.side-bar ul li a {
+    display: block;
+    padding: 12px 20px;
+    color: #374151;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+    border-bottom: none;
+}
+
+.side-bar ul li a:hover {
+    background-color: #eff6ff;
+    color: #2563eb;
+    transform: translateX(5px);
+}
+
+#sidebar-close-btn {
+    margin-top: auto;
+    margin-bottom: 40px;
+    background: #6b7280;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+#sidebar-close-btn:hover {
+    background: #4b5563;
+}
+
+/* 공용 카드 */
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-card:hover{
+    border: 1px solid #2563eb;
+    transform: translateX(5px);
+}
+
+.movie-card {
+    width: 300px;
+    margin: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.poster-wrapper {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.poster-overlay {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+
+.info-section {
+    padding: 20px;
+    color: #121212;
+    position: relative;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #aaa;
+    font-size: 14px;
+    margin: 0 0 16px 0;
+}
+
+.description {
+    font-size: 13px;
+    color: #ccc;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.action-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1f2937;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+    background-color:#0f1927 ;
+}
+
+.title-img img {
+    width: 100%;
+    height: 300px;
+}
+
+
+
+@media (min-width: 769px) {
+    
+
+    .side-bar {
+        left: 0 !important;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    }
+
+ 
+    body {
+        padding-left: 250px;
+    }
+
+    
+    #img1, 
+    #sidebar-close-btn {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero h1, h2, p {
+        animation: slideUp 0.8s ease-in-out forwards;
+    }
+
+
+    .hobby-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .hobby-card {
+        padding: 32px;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

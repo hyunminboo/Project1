@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <header>
+      <img id="img1" src="./img/Menu.png" alt="메뉴창" />
+      <a href="index.html">
+        <h1 class="logo">BHM</h1>
+      </a>
+    </header>
+
+    <aside class="side-bar">
+      <h2>MENU</h2> 
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="my-hobby.html">Hobby</a></li>
+        <li><a href="movie.html">Movie</a></li>
+        <li><a href="anime.html">Anime</a></li>
+        <li><a href="game.html">Game</a></li>
+      </ul>
+      <button id="sidebar-close-btn">SideBar Close</button>
+    </aside>
+    
+    <main>
+      <div class="title"><h2>페이지 선택</h2></div>
+      <div class="card">
+        <div class="movie-card">
+          <div class="poster-wrapper">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/ko/5/5f/%EA%B7%B9%EC%9E%A5%ED%8C%90_%EA%B7%80%EB%A9%B8%EC%9D%98_%EC%B9%BC%EB%82%A0_%EB%AC%B4%ED%95%9C%EC%84%B1%ED%8E%B8_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?20250821000807"
+              alt="Profile Poster"
+              class="poster-image" />
+            <div class="poster-overlay"></div>
+          </div>
+
+          <div class="info-section">
+            <h2 class="title">Animation</h2>
+            <p class="subtitle">잼있게 본 애니메이션</p>
+               <a href="anime.html"><button class="action-btn">애니메이션 페이지로 이동하기</button></a>          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="poster-wrapper">
+            <img src="https://i.namu.wiki/i/Z537Kq5YAtYMpr_FtkBICzb5wmNecjFFUzIEkdjaTvywoRa0VEji66Ih9HGWByCEBNx9U_9vNiXpD2tIUP2FxjfxsZDK4oRiNmlFJfhZwFQE2-iTfIM7t3Ouan4LOdNJPtZw1MhVFKvKkEFLOVY4zg.webp"
+              class="poster-image" />
+            <div class="poster-overlay"></div>
+          </div>
+
+          <div class="info-section">
+            <h2 class="title">Game</h2>
+            <p class="subtitle">내가 좋아하는 게임</p>
+            <a href="game.html"><button class="action-btn">게임 페이지로 이동하기</button></a>
+          </div>
+        </div>
+
+        <div class="movie-card">
+          <div class="poster-wrapper">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/ko/e/e4/%ED%8A%B8%EB%9E%9C%EC%8A%A4%ED%8F%AC%EB%A8%B8_%EC%98%81%ED%99%94.jpg"
+              alt="Profile Poster"
+              class="poster-image" />
+            <div class="poster-overlay"></div>
+          </div>
+
+          <div class="info-section">
+            <h2 class="title">Movie</h2>
+            <p class="subtitle">내가 좋아하는 영화</p>
+            <a href="movie.html"><button class="action-btn">Movie로 이동하기</button></a>
+          </div>
+        </div>
+    </main>
+
+    <a href="#" class="top-btn">
+      <img src="img/up.png" alt="맨 위로 가기" />
+    </a>
+
+    <script>
+      const sideBar = document.querySelector('.side-bar');
+      const menuBtn = document.getElementById('img1');
+      const closeBtn = document.getElementById('sidebar-close-btn');
+
+      if (menuBtn) {
+        menuBtn.addEventListener('click', () => {
+          sideBar.classList.add('active'); 
+        });
+      }
+
+      
+      if (closeBtn) {
+        closeBtn.addEventListener('click', () => {
+          sideBar.classList.remove('active'); 
+        });
+      }
+    </script>
+</body>
+</html>

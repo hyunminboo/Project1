@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부현민 포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body>
+    <header>
+      <img id="img1" src="./img/Menu.png" alt="메뉴창" />
+      <a href="index.html">
+        <h1 class="logo">BHM</h1>
+      </a>
+      
+    </header>
+
+    <aside class="side-bar">
+      <h2>MENU</h2>
+      <ul>
+        <li><a href="index.html">Main</a></li>
+        <li><a href="my-hobby.html">Hobby</a></li>
+        <li><a href="movie.html">Movie</a></li>
+        <li><a href="anime.html">Anime</a></li>
+        <li><a href="game.html">Game</a></li>
+      </ul>
+      <button id="sidebar-close-btn" class="action-btn" style="margin-top: 20px;">SideBar Close</button>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <h2>
+          경복대학교<br />소프트웨어융합과<br />(학생)
+          <span class="name">부현민</span>입니다.
+        </h2>
+        <p>(아래로 내려주세요.)</p>
+      </section>
+
+      <section class="section">
+        <div class="hobby-grid">
+          <a href="my-hobby.html" class="hobby-card">
+            <h3 class="category">My-hobby</h3>
+            <h2>내가 많이 보는 영상 미디어</h2>
+            <p>많이 보는 장르</p>
+            <div class="tech-tags">
+              <span class="tag">Animation</span>
+              <span class="tag">Movie</span>
+              <span class="tag">Game</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <a href="#" class="top-btn">
+      <img src="img/up.png" alt="맨 위로 가기" />
+    </a>
+
+    <footer>
+      <p>© 2003/03/28 BOOHYUNMIN</p>
+    </footer>
+
+    <script>
+      class SideBar {
+        constructor(targetSelector, direction = 'left') {
+          this.target = document.querySelector(targetSelector);
+          
+          if (!this.target) return;
+
+          this.direction = direction;
+          this.opened = false;
+          this.width = this.target.offsetWidth || 250;
+          this.init();
+        }
+
+        init() {
+          this.target.style.transition = '0.3s ease';
+          this.target.style[this.direction] = `-${this.width}px`;
+        }
+
+        open() {
+          this.opened = true;
+          this.target.style[this.direction] = '0px';
+        }
+
+        close() {
+          this.opened = false;
+          this.target.style[this.direction] = `-${this.width}px`;
+        }
+
+        toggle() {
+          if (this.opened) {
+            this.close();
+          } else {
+            this.open();
+          }
+        }
+      }
+
+      const sidebar = new SideBar(".side-bar", "left");
+
+      const menuBtn = document.getElementById("img1");
+      if (menuBtn) {
+        menuBtn.addEventListener("click", () => {
+          sidebar.toggle();
+        });
+      }
+
+      const closeBtn = document.getElementById("sidebar-close-btn");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+          sidebar.close();
+        });
+      }
+    </script>
+  </body>
+</html>

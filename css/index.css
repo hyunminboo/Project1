@@ -1,0 +1,145 @@
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.7;
+    color: #1f2937;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    transition: padding-left 0.3s ease;
+}
+
+
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #f3f4f6;
+}
+
+#img1 {
+    width: 24px;
+    height: 24px;
+    margin-left: 12px;
+    cursor: pointer;
+    
+    display: block; 
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 16px 24px;
+    color: black;
+}
+
+/* main */
+
+.hero {
+    min-height: 100vh;        
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+
+    padding: 0 24px;       
+    text-align: left;
+}
+
+.hero h2 {
+    display: block;
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.hero p {
+    display: block;
+    font-size: 17px;
+    color: #adadad;
+    max-width: 640px;
+}
+
+
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 24px 100px;
+}
+
+.name {
+    color: #3b82f6;
+}
+
+
+
+.hobby-grid {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.hobby-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 32px;
+    padding: 56px;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    background-color: #fff; 
+    display: block; 
+    text-decoration: none;
+}
+
+.hobby-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    border-color: #3b82f6;
+}
+
+.hobby-card .category {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3b82f6;
+    margin-bottom: 16px;
+}
+
+
+.hobby-card h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+    color: #1f2937;
+}
+
+.hobby-card p {
+    font-size: 17px;
+    color: #6b7280;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+   
+}
+
+.tag {
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 500;
+    background-color: #6b7280;
+}
